@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>负债</title>
+<style type="text/css">
+table {
+	border-collapse: collapse;
+	width: 50%;
+}
+
+table td, table th {
+	border: 1px solid #cad9ea;
+	color: #666;
+	height: 30px;
+}
+
+table th {
+	background-color: #CCE8EB;
+	width: 100px;
+	font-weight: bold;
+}
+
+table tr:nth-child(odd) {
+	background: #fff;
+}
+
+table tr:nth-child(even) {
+	background: #F5FAFA;
+}
+</style>
+</head>
+<body>
+	<h2>负债</h2>
+	<p th:text="'用户：' + ${accountid}" />
+	<p th:text="'资产：' + ${assets}" />
+	<p th:text="'负债：' + ${liabilities}" />
+	<p th:text="'结余：' + ${left}" />
+	<a th:href="@{/addliabweb}">添加</a>&nbsp; &nbsp;
+	<a th:href="@{/accountbook}">查看收支</a>
+	<br>
+	<br>
+	<div>
+		<form th:action="@{/liabilities}" method="post">
+			<label>状态</label> <input class="form-check-input" type="radio"
+				name="statu" value=""> <label class="form-check-label">所有</label>
+			<input class="form-check-input" type="radio" name="statu" value="0">
+			<label class="form-check-label">待付</label> <input
+				class="form-check-input" type="radio" name="statu" value="1">
+			<label class="form-check-label">结清</label>
+
+			<button type="submit" class="btn btn-primary">查询</button>
+		</form>
+		<table xss=removed class="table">
+			<tr>
+				<td>ID</td>
+				<td>支付月</td>
+				<td>月支付金额</td>
+				<td>结账期</td>
+				<td>状态</td>
+				<td>摘要</td>
+				<td>操作</td>
+				<td>操作2</td>
+			</tr>
+			<tr th:each="liab,memberStat:${liabs}">
+				<td th:text="${liab.id}" />
+				<td th:text="${liab.paymonth}" />
+				<td th:text="${liab.monthpay}" />
+				<td th:text="${liab.settledate}" />
+				<td th:text="${liab.statu}" />
+				<td th:text="${liab.memo}" />
+				<td th:if="${liab.statuv == 0}"><a
+					th:href="@{/settle(id=${liab.id})}">结清</a></td>
+				<td th:if="${liab.statuv == 1}"><a
+					th:href="@{/waitpay(id=${liab.id})}">待付</a></td>
+				<td><a th:href="@{/settledel(id=${liab.id})}">删除</a></td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>
