@@ -9,7 +9,7 @@ import com.myliabilities.db.utils.InsertTemplate;
 /**
  * 插入账户数据
  * 
- * @author Pactera
+ * @author LL
  * 2020年5月24日
  */
 public class InsertLiabilities implements IPreparedStatementCreate {

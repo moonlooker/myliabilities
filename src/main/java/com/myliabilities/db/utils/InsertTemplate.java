@@ -11,7 +11,7 @@ import com.myliabilities.utils.MyClassUtils;
 /**
  * 插入语句模板
  * 
- * @author Pactera
+ * @author LL
  * 2020年5月25日
  */
 public class InsertTemplate {

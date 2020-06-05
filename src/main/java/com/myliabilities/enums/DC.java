@@ -2,7 +2,7 @@ package com.myliabilities.enums;
 
 /**
  * 收支标志
- * @author Pactera
+ * @author LL
  * 2020年5月25日
  */
 public enum DC {

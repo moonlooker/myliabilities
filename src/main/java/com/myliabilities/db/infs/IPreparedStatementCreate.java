@@ -5,7 +5,7 @@ import java.sql.PreparedStatement;
 /**
  * 拼接一个查询/更新/插入/删除等条件参数
  * 
- * @author Pactera
+ * @author LL
  * 2020年5月25日
  */
 public interface IPreparedStatementCreate {

@@ -6,7 +6,7 @@ import com.myliabilities.dao.liabilities.CreateLiabilitiesTable;
 
 /**
  * 应用启动,如果没有表就创建一个
- * @author Pactera
+ * @author LL
  * 2020年5月25日
  */
 public class AStartTableCheck {

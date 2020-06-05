@@ -28,7 +28,7 @@ import com.myliabilities.enums.LiabilitiesStatusEnum;
  * 债务:
  * 每月债务=债务额/到期月数
  * 每月可用余额=资产-月债务
- * @author Pactera
+ * @author LL
  * 2020年5月27日
  */
 public class LiabilitiesService {

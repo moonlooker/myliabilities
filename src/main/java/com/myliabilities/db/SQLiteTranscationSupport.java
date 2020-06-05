@@ -14,7 +14,7 @@ import com.myliabilities.db.infs.IPreparedStatementCreate;
 
 /**
  * 带事务的提交
- * @author Pactera
+ * @author LL
  * 2020年5月25日
  */
 public class SQLiteTranscationSupport {

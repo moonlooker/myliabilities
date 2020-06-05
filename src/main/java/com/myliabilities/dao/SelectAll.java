@@ -8,7 +8,7 @@ import com.myliabilities.db.utils.SelectTemplate;
 
 /**
  * 查询一个表的全部记录
- * @author Pactera
+ * @author LL
  * 2020年5月25日
  * @param <T>
  */
